@@ -8,7 +8,7 @@ const options: swaggerJsdoc.Options = {
     openapi: "3.0.0",
     info: {
       title: "Airbnb Clone REST API Docs",
-      version,
+      version : 1.0.0,
     },
     components: {
       securitySchemes: {
