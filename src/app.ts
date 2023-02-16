@@ -10,10 +10,13 @@ import cors from "cors";
 import session from "express-session";
 import { IUser } from "./models/userModel";
 const app = express();
-const corsOptions = { credentials: true};
+const corsOptions = {
+    credentials: true,
+    origin: true,
+  };
 app.use(express.static(path.join(__dirname, "../public")));
 
-app.use(cors());
+app.use(cors(corsOptions));
 const router = Router();
 app.use(morgan("dev"));
 app.use(express.json());
