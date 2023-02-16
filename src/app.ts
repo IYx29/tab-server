@@ -10,7 +10,7 @@ import cors from "cors";
 import session from "express-session";
 import { IUser } from "./models/userModel";
 const app = express();
-const corsOptions = { credentials: true, origin: "http://localhost:3000" };
+const corsOptions = { credentials: true,origin : "*" };
 app.use(express.static(path.join(__dirname, "../public")));
 
 app.use(cors(corsOptions));
